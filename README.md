@@ -20,22 +20,15 @@ Create a device ->Download the connection Kit, Choose Platform ( and in this cas
 corresponding JSON code to the Amazon IoT Broker.
 Download the aws sdk kit.
 
+![screen shot 2018-01-27 at 3 38 41 pm](https://user-images.githubusercontent.com/14288989/35470954-84bc7660-0378-11e8-9770-fdbf80c660f1.png)
+![screen shot 2018-01-27 at 3 39 10 pm](https://user-images.githubusercontent.com/14288989/35470953-84840352-0378-11e8-8da7-c5181e07ad79.png)
+![screen shot 2018-01-27 at 3 39 32 pm](https://user-images.githubusercontent.com/14288989/35470952-844ca330-0378-11e8-9cd5-a818d415014c.png)
+![screen shot 2018-01-27 at 3 39 45 pm](https://user-images.githubusercontent.com/14288989/35470951-841277a0-0378-11e8-90c4-c766a147107e.png)
+![screen shot 2018-01-27 at 3 40 16 pm](https://user-images.githubusercontent.com/14288989/35470950-83d6be90-0378-11e8-8903-af9d7f31e8a0.png)
 
-Make approrpriate changes to code to publish just the number in JSON format. (This number down the road can be anything like CPU temperature or a device's parameters)
+Make appropriate changes to code to publish just the number in JSON format. (This number down the road can be anything like CPU temperature or a device's parameters)
 
-		./start.sh 
-		
-		Running pub/sub sample application...
-		Connecting in Code
-		connect
-		Publishing topic_2 to Amazon IoT Broker an Incremented Number : 1
-		{"mode1Process":1,"id":1,"temperature":1,"serialnumber":1}
-		Publishing topic_2 to Amazon IoT Broker an Incremented Number : 2
-		{"mode1Process":2,"id":2,"temperature":2,"serialnumber":2}
-		Publishing topic_2 to Amazon IoT Broker an Incremented Number : 3
-		{"mode1Process":3,"id":3,"temperature":3,"serialnumber":3}
-		Publishing topic_2 to Amazon IoT Broker an Incremented Number : 4
-		{"mode1Process":4,"id":4,"temperature":4,"serialnumber":4}
+The default client publishes to topic called "topic_2".
 
 
 Modified Code in node_modules/aws-iot-device-sdk/examples/device-example.js
@@ -63,16 +56,59 @@ Modified Code in node_modules/aws-iot-device-sdk/examples/device-example.js
    }, Math.max(args.delay, minimumDelay)); // clip to minimum
 
 
-![screen shot 2018-01-27 at 3 38 23 pm](https://user-images.githubusercontent.com/14288989/35470956-852ec15c-0378-11e8-8172-a34db2dba6fd.png)
-![screen shot 2018-01-27 at 3 38 29 pm](https://user-images.githubusercontent.com/14288989/35470955-84f45bc0-0378-11e8-9809-d6f774ddb7fb.png)
-![screen shot 2018-01-27 at 3 38 41 pm](https://user-images.githubusercontent.com/14288989/35470954-84bc7660-0378-11e8-9770-fdbf80c660f1.png)
-![screen shot 2018-01-27 at 3 39 10 pm](https://user-images.githubusercontent.com/14288989/35470953-84840352-0378-11e8-8da7-c5181e07ad79.png)
-![screen shot 2018-01-27 at 3 39 32 pm](https://user-images.githubusercontent.com/14288989/35470952-844ca330-0378-11e8-9cd5-a818d415014c.png)
-![screen shot 2018-01-27 at 3 39 45 pm](https://user-images.githubusercontent.com/14288989/35470951-841277a0-0378-11e8-90c4-c766a147107e.png)
-![screen shot 2018-01-27 at 3 40 16 pm](https://user-images.githubusercontent.com/14288989/35470950-83d6be90-0378-11e8-8903-af9d7f31e8a0.png)
-
+Now run the code.
+		./start.sh 
+		
+		Running pub/sub sample application...
+		Connecting in Code
+		connect
+		Publishing topic_2 to Amazon IoT Broker an Incremented Number : 1
+		{"mode1Process":1,"id":1,"temperature":1,"serialnumber":1}
+		Publishing topic_2 to Amazon IoT Broker an Incremented Number : 2
+		{"mode1Process":2,"id":2,"temperature":2,"serialnumber":2}
+		Publishing topic_2 to Amazon IoT Broker an Incremented Number : 3
+		{"mode1Process":3,"id":3,"temperature":3,"serialnumber":3}
+		Publishing topic_2 to Amazon IoT Broker an Incremented Number : 4
+		{"mode1Process":4,"id":4,"temperature":4,"serialnumber":4}
 
 Test
 Check that you are receiving messages.
+
+Click on Test 
+
+Subscribe to the topic topic_2
+
+![screen shot 2018-01-27 at 3 43 39 pm](https://user-images.githubusercontent.com/14288989/35471039-0221dab8-037a-11e8-8442-c0be4f7c101d.png)
+
+![screen shot 2018-01-27 at 3 50 05 pm](https://user-images.githubusercontent.com/14288989/35471038-01e8f914-037a-11e8-87ee-6a667e3f857f.png)
+
+![screen shot 2018-01-27 at 3 50 18 pm](https://user-images.githubusercontent.com/14288989/35471037-01b0d1a6-037a-11e8-8e19-a95ed64d497f.png)
+
+Now that you are receiving data:
+
+Let's add the Database Rules to insert to Amazon Dynamo DB
+
+
+## Amazon Dynamo DB configuration and setting up
+
+Click on Act -> Create a Rule
+
+
+![screen shot 2018-01-27 at 3 54 53 pm](https://user-images.githubusercontent.com/14288989/35471163-c34a8e8c-037b-11e8-8204-1d5e6854b206.png)
+![screen shot 2018-01-27 at 3 55 09 pm](https://user-images.githubusercontent.com/14288989/35471162-c3121a8e-037b-11e8-9896-4f44d03137e0.png)
+![screen shot 2018-01-27 at 3 55 22 pm](https://user-images.githubusercontent.com/14288989/35471161-c2d9acb2-037b-11e8-9020-da0ff266d28a.png)
+![screen shot 2018-01-27 at 3 55 33 pm](https://user-images.githubusercontent.com/14288989/35471159-c2a25fc8-037b-11e8-9b71-8c35d0c81637.png)
+![screen shot 2018-01-27 at 3 56 16 pm](https://user-images.githubusercontent.com/14288989/35471158-c268229a-037b-11e8-8833-13cdf2d9f491.png)
+![screen shot 2018-01-27 at 3 56 29 pm](https://user-images.githubusercontent.com/14288989/35471157-c2307c3c-037b-11e8-857e-7a2a33c8f9e7.png)
+![screen shot 2018-01-27 at 3 56 58 pm](https://user-images.githubusercontent.com/14288989/35471156-c1f9370e-037b-11e8-88c9-f17c5e656fd9.png)
+![screen shot 2018-01-27 at 3 57 13 pm](https://user-images.githubusercontent.com/14288989/35471155-c1c17990-037b-11e8-9390-b61fab0d6e81.png)
+![screen shot 2018-01-27 at 3 57 31 pm](https://user-images.githubusercontent.com/14288989/35471154-c188bb0a-037b-11e8-8cb4-34e735a27f80.png)
+![screen shot 2018-01-27 at 4 02 41 pm](https://user-images.githubusercontent.com/14288989/35471153-c150510c-037b-11e8-9706-ff98102bf3e2.png)
+![screen shot 2018-01-27 at 4 02 53 pm](https://user-images.githubusercontent.com/14288989/35471152-c117bfb8-037b-11e8-8f3c-ea153a54d293.png)
+
+Check that the database is enabled.
+
+See that you are receiving the data in the tables.
+
 
 
