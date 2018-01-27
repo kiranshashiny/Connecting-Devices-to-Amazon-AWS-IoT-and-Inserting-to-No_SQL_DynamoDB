@@ -63,12 +63,16 @@ Modified Code in node_modules/aws-iot-device-sdk/examples/device-example.js
    }, Math.max(args.delay, minimumDelay)); // clip to minimum
 
 
-![screen shot 2018-01-27 at 1 11 32 pm](https://user-images.githubusercontent.com/14288989/35469953-e123b782-0365-11e8-9ed2-8765d4c067c8.png)
-![screen shot 2018-01-27 at 1 24 06 pm](https://user-images.githubusercontent.com/14288989/35469948-e00eae24-0365-11e8-8738-06c30c325b1c.png)
-![screen shot 2018-01-27 at 1 13 21 pm](https://user-images.githubusercontent.com/14288989/35469949-e046c142-0365-11e8-83e1-428ed62cee17.png)
-![screen shot 2018-01-27 at 1 12 54 pm](https://user-images.githubusercontent.com/14288989/35469950-e07e1d04-0365-11e8-818b-639af85dc470.png)
-![screen shot 2018-01-27 at 1 12 21 pm](https://user-images.githubusercontent.com/14288989/35469951-e0b4fad6-0365-11e8-83b6-d0b3fcd2191b.png)
-![screen shot 2018-01-27 at 1 12 00 pm](https://user-images.githubusercontent.com/14288989/35469952-e0ec2a06-0365-11e8-9bb2-4d7b42bda757.png)
+![screen shot 2018-01-27 at 3 38 23 pm](https://user-images.githubusercontent.com/14288989/35470956-852ec15c-0378-11e8-8172-a34db2dba6fd.png)
+![screen shot 2018-01-27 at 3 38 29 pm](https://user-images.githubusercontent.com/14288989/35470955-84f45bc0-0378-11e8-9809-d6f774ddb7fb.png)
+![screen shot 2018-01-27 at 3 38 41 pm](https://user-images.githubusercontent.com/14288989/35470954-84bc7660-0378-11e8-9770-fdbf80c660f1.png)
+![screen shot 2018-01-27 at 3 39 10 pm](https://user-images.githubusercontent.com/14288989/35470953-84840352-0378-11e8-8da7-c5181e07ad79.png)
+![screen shot 2018-01-27 at 3 39 32 pm](https://user-images.githubusercontent.com/14288989/35470952-844ca330-0378-11e8-9cd5-a818d415014c.png)
+![screen shot 2018-01-27 at 3 39 45 pm](https://user-images.githubusercontent.com/14288989/35470951-841277a0-0378-11e8-90c4-c766a147107e.png)
+![screen shot 2018-01-27 at 3 40 16 pm](https://user-images.githubusercontent.com/14288989/35470950-83d6be90-0378-11e8-8903-af9d7f31e8a0.png)
 
 
---
+Test
+Check that you are receiving messages.
+
+
