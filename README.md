@@ -125,6 +125,9 @@ This final configuration is important, I have set up the id and temperature as t
 
 
 
-This is the snapshot of my AWS Dynamo DB console showing the number being sent from the client on the Dynamo DB Tables being inserted. 
+This is the snapshot of my AWS Dynamo DB console showing the number( Just imagine it is some temperature from a sensor on a microcontroller) being sent from the client being inserted to Dynamo DB Tables.
 
 ![screen shot 2018-01-28 at 1 38 37 pm](https://user-images.githubusercontent.com/14288989/35480415-7439fee6-0433-11e8-9d0f-b931ab8ac454.png)
+
+
+If you are going to try this - Enjoy building it, and Good Luck.
