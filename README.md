@@ -93,6 +93,12 @@ Let's add the Database Rules to insert to Amazon Dynamo DB
 
 Click on Act -> Create a Rule
 
+Follow the official page for formal detailed explanation of setting up the database.
+
+https://docs.aws.amazon.com/iot/latest/developerguide/iot-ddb-rule.html
+
+
+Here are my snapshots.
 
 ![screen shot 2018-01-27 at 3 54 53 pm](https://user-images.githubusercontent.com/14288989/35471163-c34a8e8c-037b-11e8-8204-1d5e6854b206.png)
 ![screen shot 2018-01-27 at 3 55 09 pm](https://user-images.githubusercontent.com/14288989/35471162-c3121a8e-037b-11e8-9896-4f44d03137e0.png)
@@ -104,11 +110,15 @@ Click on Act -> Create a Rule
 ![screen shot 2018-01-27 at 3 57 13 pm](https://user-images.githubusercontent.com/14288989/35471155-c1c17990-037b-11e8-9390-b61fab0d6e81.png)
 ![screen shot 2018-01-27 at 3 57 31 pm](https://user-images.githubusercontent.com/14288989/35471154-c188bb0a-037b-11e8-8cb4-34e735a27f80.png)
 ![screen shot 2018-01-27 at 4 02 41 pm](https://user-images.githubusercontent.com/14288989/35471153-c150510c-037b-11e8-9706-ff98102bf3e2.png)
-![screen shot 2018-01-27 at 4 02 53 pm](https://user-images.githubusercontent.com/14288989/35471152-c117bfb8-037b-11e8-8f3c-ea153a54d293.png)
 
-Check that the database is enabled.
-
-See that you are receiving the data in the tables.
+Database tables setup:
+This final configuration is important, I have set up the id and temperature as the primary key and the sort key respectively.
 
 
+![screen shot 2018-01-28 at 1 58 49 pm](https://user-images.githubusercontent.com/14288989/35480413-71a5ceee-0433-11e8-95c5-21b6cb4673de.png)
 
+
+
+This is the snapshot of my AWS Dynamo DB console showing the number being sent from the client on the Dynamo DB Tables being inserted. 
+
+![screen shot 2018-01-28 at 1 38 37 pm](https://user-images.githubusercontent.com/14288989/35480415-7439fee6-0433-11e8-9d0f-b931ab8ac454.png)
