@@ -1,4 +1,4 @@
-# Connecting-Devices-to-Amazon-IoT-MQTT-Broker-and-NoSQL_DynamoDB
+# Connecting-Devices-to-Amazon's-AWS-IoT-MQTT-Broker-and-Inserting-data-to-NoSQL_DynamoDB
 This blog is about how to connect a MQTT client to Amazon IoT, and saving data in Amazon's NoSQL DynamoDB
 
 Here, I will describe how we can create a simple ready made AWS IoT node.js application that sends data from an application
