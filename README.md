@@ -12,9 +12,15 @@ One can imagine this data can be anything from any sensor, like Room air pressur
 
 Since the focus of this blog is about integration from the Amazon's MQTT IOT Broker to the NoSQL Dynamo DB, I will defer the details of the sensor and just publish a simple integer counter.
 
+In order to set up the device, follow instructions listed in this Developers Guide. This will configure the device, setup certificates, rules, policies etc.a
+
+https://us-west-2.console.aws.amazon.com/iot/home?region=us-west-2#/connIntro
+
 Steps:
 
 Create a Free-Tier Amazon account that gives the user multiple applications to use for-free ( at least for the first year) and also limited usage for free after 1 year.
+
+![screen shot 2018-01-28 at 2 06 51 pm](https://user-images.githubusercontent.com/14288989/35480476-cac3932a-0434-11e8-88e5-6fcc33d36631.png)
 
 Create a device ->Download the connection Kit, Choose Platform ( and in this case, I have chosen Linux OS/X, and used Node.js AWS IoT device SDK ) and modify the code to send 
 corresponding JSON code to the Amazon IoT Broker.
